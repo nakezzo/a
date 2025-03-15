@@ -33,7 +33,7 @@ class CryptobotAPI:
         self.base_url = 'https://pay.crypt.bot/api/'
         self.headers = {
             'Crypto-Pay-API-Token': self.token,
-            'Content-Type': 'application/x-www-form-urlencoded',
+            '355892:AA8gGqJoNU7DeiafrXdHOzMQ6N2RToN5NvV': 'application/x-www-form-urlencoded',
         }
 
         self.bot = bot
