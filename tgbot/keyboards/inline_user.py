@@ -16,7 +16,7 @@ def user_profile_finl() -> InlineKeyboardMarkup:
 
     keyboard.row(
         ikb("💰 Пополнить", data="user_refill"),
-        ikb("🎁 Мои покупки", data="user_purchases"),
+        ikb("🛒 Мои покупки", data="user_purchases"),
     )
 
     return keyboard.as_markup()

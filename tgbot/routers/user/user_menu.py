@@ -30,7 +30,7 @@ async def user_shop(message: Message, bot: Bot, state: FSM, arSession: ARS):
             reply_markup=prod_item_category_swipe_fp(0),
         )
     else:
-        await message.answer("<b>🎁 Увы, товары в данное время отсутствуют</b>")
+        await message.answer("<b>🛒В данный момент товары отсутствуют. Следите за обновлениями!</b>")
 
 
 # Открытие профиля

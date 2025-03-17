@@ -33,9 +33,9 @@ async def open_profile_user(bot: Bot, user_id: Union[int, str]):
         ➖➖➖➖➖➖➖➖➖➖
         🆔 ID: <code>{get_user.user_id}</code>
         💰 Баланс: <code>{get_user.user_balance}₽</code>
-        🎁 Куплено товаров: <code>{count_items}шт</code>
+        🛒 Куплено товаров: <code>{count_items}шт</code>
 
-        🕰 Регистрация: <code>{convert_date(get_user.user_unix, False, False)} ({convert_day(how_days)})</code>
+        🕑 Регистрация: <code>{convert_date(get_user.user_unix, False, False)} ({convert_day(how_days)})</code>
     """)
 
     await bot.send_message(
@@ -60,8 +60,8 @@ async def position_open_user(bot: Bot, user_id: int, position_id: Union[str, int
         <b>🎁 Покупка товара</b>{hide_link(get_position.position_photo)}
         ➖➖➖➖➖➖➖➖➖➖
         ▪️ Название: <code>{get_position.position_name}</code>
-        ▪️ Категория: <code>{get_category.category_name}</code>
-        ▪️ Стоимость: <code>{get_position.position_price}₽</code>
+       📁 Категория: <code>{get_category.category_name}</code>
+        💰 Стоимость: <code>{get_position.position_price}₽</code>
         ▪️ Количество: <code>{len(get_items)}шт</code>
         {text_desc}
     """)
@@ -253,13 +253,13 @@ async def position_open_admin(bot: Bot, user_id: int, position_id: Union[str, in
     send_text = ded(f"""
         <b>📁 Редактирование позиции</b>{hide_link(get_position.position_photo)}
         ➖➖➖➖➖➖➖➖➖➖
-        ▪️ Категория: <code>{get_category.category_name}</code>
-        ▪️ Позиция: <code>{get_position.position_name}</code>
-        ▪️ Стоимость: <code>{get_position.position_price}₽</code>
+        📁 Категория: <code>{get_category.category_name}</code>
+        🛒 Позиция: <code>{get_position.position_name}</code>
+        💰 Стоимость: <code>{get_position.position_price}₽</code>
         ▪️ Количество: <code>{len(get_items)}шт</code>
         ▪️ Изображение: {position_photo_text}
-        ▪️ Дата создания: <code>{convert_date(get_category.category_unix)}</code>
-        ▪️ Описание: {position_desc}
+        🕐 Дата создания: <code>{convert_date(get_category.category_unix)}</code>
+        📃 Описание: {position_desc}
 
         💸 Продаж за День: <code>{profit_count_day}шт</code> - <code>{profit_amount_day}₽</code>
         💸 Продаж за Неделю: <code>{profit_count_week}шт</code> - <code>{profit_amount_week}₽</code>
